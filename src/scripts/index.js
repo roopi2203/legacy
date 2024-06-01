@@ -1,5 +1,6 @@
 import 'regenerator-runtime'
 import '../styles/main.css';
+import '../styles/responsive.css'
 
 import { footerElemen } from './components/footer';
 import { navbarElement } from './components/navbar';
