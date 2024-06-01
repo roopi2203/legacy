@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 * {
     padding: 0;
@@ -8,4 +11,272 @@
 
 body {
     font-family: "Inter", sans-serif;
+    background-color: #F4F4F4;
 }
+
+.logo-header-con {
+    width: 70px;
+}
+
+.logo-header {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 45px;
+}
+
+
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.profile-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-images > img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.hero-container > h1 {
+    font-family: "Playfair Display", serif;
+    color: #0600E5;
+    font-style: italic;
+}
+
+.hero-text-left {
+    position: absolute;
+    left: 140px;
+    top: 300px;
+}
+
+.hero-text-right {
+    position: absolute;
+    right: 140px;
+    top: 440px;
+    font-size: 20px;
+}
+
+.btn-read-now {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 3px;
+    background-color: #1E1E1E;
+    max-width: 500px;
+}
+
+.btn-black {
+    width: 250px;
+    background-color: #1E1E1E;
+    color: white;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 100px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    margin: 30px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.card-item {
+    width: 500px;
+    height: 420px;
+    background-color: #1A1A1A;
+    
+}
+
+.card-img {
+    width: 100%;
+    height: 65%;
+}
+
+.card-img > img {
+    width: 100%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 30px;
+    color: white;
+}
+
+.card-text > h2 {
+    font-family: "DM Serif Display", serif;
+    text-decoration: underline;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.content-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+.second-content {
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 120px 200px;
+    margin: 60px 0;
+}
+
+.second-content-img {
+    width: 50%;
+}
+
+.second-content-img > img{
+    width: 100%;
+}
+
+.second-content-text {
+    width: 50%;
+}
+
+.second-content-text > h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: right;
+    color: white;
+    margin-bottom: 26px;
+}
+
+.second-content-text > p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: right;
+    color: white;
+}
+
+
+.third-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 120px 200px;
+}
+
+.third-content-img {
+    width: 50%;
+}
+
+.third-content-img > img{
+    width: 100%;
+}
+
+.third-content-text {
+    width: 50%;
+}
+
+.third-content-text > h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+    color: #1A1A1A;
+    margin-bottom: 26px;
+}
+
+.third-content-text > p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #1A1A1A;
+}
+
+footer {
+    background-color: #0600E5;
+    color: white;
+    padding: 50px 80px;
+    margin-top: 60px;
+
+}
+
+.footer-top {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-right > p {
+    text-align: right;
+}
+
+.footer-top-left > p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-top-right > p > a {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-bottom-left > .nav-list > .nav-item > a {
+    color: white;
+} 
+
