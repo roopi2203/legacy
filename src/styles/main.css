@@ -338,3 +338,205 @@ footer {
     width: 100%;
 }
 
+
+/* Kode CSS halaman About Us */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+}
+
+.desc p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #939393;
+}
+
+.headline {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.our-team {
+    padding: 0 80px;
+}
+
+.our-team > .headline h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1E1E1E;
+}
+
+.our-team > .headline p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #939393;
+}
+
+.person1 {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.person1 > .photo {
+    width: 120px;
+}
+
+.person1 > .photo > img {
+    width: 100%;
+}
+
+.identitas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.identitas > h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.identitas > h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.identitas > p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ------------------- */
+
+.person2 {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.person2 > .photo {
+    width: 120px;
+}
+
+.person2 > .photo > img {
+    width: 100%;
+}
+
+.identitas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.person2 > .identitas > h2{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.person2 > .identitas > h3{
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.person2 > .identitas > p{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ------------- */
+
+.person3 {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.person3 > .photo {
+    width: 120px;
+}
+
+.person3 > .photo > img {
+    width: 100%;
+}
+
+.identitas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.identitas > h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.identitas > h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.identitas > p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/* kode css halaman profile */
+
+.profile-head-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile-info-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info-img > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-form-profile {
+    width: 600px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #939393 ;
+    border-radius: 12px;
+}
+
+.profile-form-con {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+label {
+    display: block;
+}
+
+.profile-form {
+    margin-top: 30px;
+}
+
+
+
+

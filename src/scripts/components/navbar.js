@@ -5,9 +5,9 @@ const navbarElement = `
 
     <div class="navbar">
         <ul class="nav-list">
-            <li class="nav-item"><a href="">HOME</a></li>
-            <li class="nav-item"><a href="">HISTORY</a></li>
-            <li class="nav-item"><a href="">FAQ</a></li>
+            <li class="nav-item"><a href="/">HOME</a></li>
+            <li class="nav-item"><a href="/history">HISTORY</a></li>
+            <li class="nav-item"><a href="/faq">FAQ</a></li>
             <li class="nav-item"><a href="">ABOUT US</a></li>
         </ul>
     </div>

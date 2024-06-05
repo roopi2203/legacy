@@ -45,6 +45,16 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(__dirname, 'src/templates/index.html'),
         }),
+
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: path.resolve(__dirname, 'src/templates/about.html'),
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'profile.html',
+            template: path.resolve(__dirname, 'src/templates/profile.html')
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {
