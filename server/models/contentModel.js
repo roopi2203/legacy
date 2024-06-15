@@ -11,9 +11,15 @@ const contentSchema = mongoose.Schema(
             type: String,
             require: [true, "Please insert the story"]
         },
-        image: {
-            type: String,
-            require: false,
+        images: {
+            type: [String],
+            validate: {
+                validator: function(v) {
+                    return v.length <= 5;
+                },
+                message: "You can only upload up to 5 images."
+            },
+            required: false
         }
     },
     {
