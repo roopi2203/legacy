@@ -66,44 +66,74 @@ main {
 }
 
 /* isi faq_page */
+
 .accordion {
-    background-color: rgba(244,244,244,255);
-    color: #444;
-    cursor: pointer;
-    padding: 40px;
-    width: 900px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .panel {
-    padding: 0 18px;
-    width: 900px;
-    font-size: 15px;
-    background-color: rgba(244,244,244,255);
-    max-height: 0;
+    width: 870px;
+    border-radius: 5px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
+    padding: 5px;
+}
+
+.accordion-item {
+    padding: 10px 0;
+    position: relative;
+}
+
+.accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #f8f4f4;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.accordion-header:hover {
+    background-color: #f8f4f4;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #f8f4f4;
+    margin: 5px 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out, margin-left 0.3s ease-out, border-left 0.3s ease-out;
+    border-left: 5px solid transparent; /* Initially transparent */
+    opacity: 0.5; /* More faded content */
+}
+
+.accordion-content.open {
+    max-height: 500px; /* Adjust based on content */
+    opacity: 0.5; /* More faded content */
+    padding: 15px;
+    margin-left: 40px; /* Increased indentation when open */
+    border-left: 5px solid rgba(0, 0, 255, 0.5); /* More faded blue vertical line */
+}
+
+.plus-icon {
+    font-size: 24px;
+    color: #00f;
+    transition: transform 0.3s;
+    margin-right: 10px;
+}
+
+.plus-icon.rotate {
+    transform: rotate(45deg);
+}
+
+.accordion-item:not(:last-child)::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* isi faq_page */
+
 footer {
     background-color: #0600E5;
     color: white;

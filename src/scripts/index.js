@@ -10,17 +10,19 @@ footerContainer.innerHTML = footerElemen;
 const navbarContainer = document.querySelector('#header');
 navbarContainer.innerHTML = navbarElement;
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
+document.querySelectorAll('.accordion-header').forEach(item => {
+    item.addEventListener('click', () => {
+        const content = item.nextElementSibling;
+        const icon = item.querySelector('.plus-icon');
+        
+        if (content.classList.contains('open')) {
+            content.classList.remove('open');
+            icon.textContent = '+';
+        } else {
+            document.querySelectorAll('.accordion-content').forEach(content => content.classList.remove('open'));
+            document.querySelectorAll('.plus-icon').forEach(icon => icon.textContent = '+');
+            content.classList.add('open');
+            icon.textContent = '−';
+        }
+    });
+});
