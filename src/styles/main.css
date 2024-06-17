@@ -65,74 +65,90 @@ main {
     align-items: center;
 }
 
-/* isi faq_page */
-
-.accordion {
-    width: 870px;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 5px;
-}
-
-.accordion-item {
-    padding: 10px 0;
-    position: relative;
-}
-
-.accordion-header {
-    padding: 15px;
-    cursor: pointer;
-    background-color: #f8f4f4;
-    font-weight: bold;
+/* isi mainpage_admin*/
+.form-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 5px 0;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.accordion-header:hover {
-    background-color: #f8f4f4;
+.upload-form {
+    width: 1500px; /* Set width to 100% */
+    padding: 185px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: center; /* Center align content */
 }
 
-.accordion-content {
-    padding: 0 15px;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    background-color: #f8f4f4;
-    margin: 5px 0;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out, margin-left 0.3s ease-out, border-left 0.3s ease-out;
-    border-left: 5px solid transparent; /* Initially transparent */
-    opacity: 0.5; /* More faded content */
+.upload-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f4f4; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    font-size: 20px;
+    text-align: left; /* Align content to the left */
+    font-family: inherit; /* Inherit font-family from parent */
+    font-weight: bold; /* Make text bold */
 }
 
-.accordion-content.open {
-    max-height: 500px; /* Adjust based on content */
-    opacity: 0.5; /* More faded content */
-    padding: 15px;
-    margin-left: 40px; /* Increased indentation when open */
-    border-left: 5px solid rgba(0, 0, 255, 0.5); /* More faded blue vertical line */
+.upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f4f4; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    text-align: left; /* Align content to the left */
+    font-family: inherit; /* Inherit font-family from parent */
 }
 
-.plus-icon {
-    font-size: 24px;
-    color: #00f;
-    transition: transform 0.3s;
-    margin-right: 10px;
+.upload-form input[type="text"]::placeholder,
+.upload-form textarea::placeholder {
+    color: #999; /* Set placeholder color */
+    font-size: 20px; /* Set font size for placeholder */
+    font-weight: bold; /* Make placeholder text bold */
+    font-family: inherit; /* Inherit font-family from parent */
 }
 
-.plus-icon.rotate {
-    transform: rotate(45deg);
+.upload-form input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-.accordion-item:not(:last-child)::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background-color: #ddd;
-    margin: 10px 0;
+.file-label {
+    background-color: #00f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Make button text bold */
+    float: left; /* Float the label to the left */
+    margin-right: 10px; /* Add margin to separate from textarea */
 }
 
-/* isi faq_page */
+.upload-form button {
+    width: auto; /* Set width to auto for default width */
+    background-color: #00f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Make button text bold */
+    margin-top: 10px; /* Add margin to separate from the label */
+    clear: both; /* Clear float to prevent overlapping */
+}
+
+
+/* isi mainpage_admin */
 
 footer {
     background-color: #0600E5;
