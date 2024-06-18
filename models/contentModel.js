@@ -7,11 +7,19 @@ const contentSchema = mongoose.Schema(
             type: String,
             require: [true, "Please insert the title"]
         },
+        introduction: {
+            type: String,
+            require: [true, "Please insert the introduction"]
+        },
+        source: {
+            type: String,
+            require: [true, "Please insert the source"]
+        },
         story: {
             type: String,
             require: [true, "Please insert the story"]
         },
-        images: {
+        image: {
             type: [String],
             validate: {
                 validator: function(v) {
@@ -19,7 +27,7 @@ const contentSchema = mongoose.Schema(
                 },
                 message: "You can only upload up to 5 images."
             },
-            required: false
+            required: true
         }
     },
     {
@@ -30,3 +38,4 @@ const contentSchema = mongoose.Schema(
 const Content = mongoose.model("Content", contentSchema);
 
 module.exports = Content;
+
