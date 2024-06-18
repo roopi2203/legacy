@@ -128,6 +128,23 @@ main {
   font-size: 12px;
 }
 
+#navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-auth {
+  width: fit-content;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
 .content {
   margin: 30px 80px;
   display: grid;
@@ -137,19 +154,22 @@ main {
 
 .card-item {
   width: 500px;
+  height: 400px;
   background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .card-img {
-  width: 100%;
-  height: 65%;
+  width: 500px;
+  height: 230px;
 }
 
 .card-img > img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-text {
@@ -163,7 +183,6 @@ main {
 
 .card-text > h2 {
   font-family: "DM Serif Display", serif;
-  text-decoration: underline;
   font-size: 20px;
   font-weight: 100;
 }
@@ -565,41 +584,383 @@ label {
 /* -------------------------- faq page ---------------------- */
 
 .accordion {
-  background-color: rgba(244, 244, 244, 255);
-  color: #444;
-  cursor: pointer;
-  padding: 40px;
-  width: 900px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 16px;
-  transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-  background-color: #ccc;
-}
-
-.accordion:after {
-  content: "\002B";
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.panel {
-  padding: 0 18px;
-  width: 900px;
-  font-size: 15px;
-  background-color: rgba(244, 244, 244, 255);
-  max-height: 0;
+  width: 870px;
+  border-radius: 5px;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  padding: 5px;
 }
+
+.accordion-item {
+  padding: 10px 0;
+  position: relative;
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f8f4f4;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.accordion-header:hover {
+  background-color: #f8f4f4;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #f8f4f4;
+  margin: 5px 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out, margin-left 0.3s ease-out, border-left 0.3s ease-out;
+  border-left: 5px solid transparent; /* Initially transparent */
+  opacity: 0.5; /* More faded content */
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 0.5; /* More faded content */
+  padding: 15px;
+  margin-left: 40px; /* Increased indentation when open */
+  border-left: 5px solid rgba(0, 0, 255, 0.5); /* More faded blue vertical line */
+}
+
+.plus-icon {
+  font-size: 24px;
+  color: #00f;
+  transition: transform 0.3s;
+  margin-right: 10px;
+}
+
+.plus-icon.rotate {
+  transform: rotate(45deg);
+}
+
+.accordion-item:not(:last-child)::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+.accordion-header > .title {
+  color: #11101d;
+}
+
+/* ------------------------------ Detail Sejarah Page --------------------------------------- */
+
+
+
+/*--Review--*/
+#slideShow {
+  margin-top: -38px;
+  text-align: center;
+  /* padding-bottom: 50px; */
+}
+
+.container-1 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 0px;
+  overflow: hidden;
+  display: block;
+}
+
+.wrapper-1 {
+  width: 300%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: 1s;
+}
+
+.slideshow {
+  width: 100%;
+  height: 630px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0px;
+  position: relative;
+}
+
+.slide-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+
+.service-desc {
+  width: 80%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+
+hr {
+
+  height: 2px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.service-desc h3 {
+  color: #fff;
+}
+
+.service-desc p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.slideshow:hover .service-desc {
+  bottom: 30%;
+  opacity: 1;
+}
+
+.indicators-1 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicators-1 button {
+  background-color: #c1c1c1;
+  border: none;
+  outline: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+button.active {
+  width: 40px;
+  border-radius: 50px;
+  background: #11101d;
+}
+
+.sidebar.open ~ .container {
+  left: -100%;
+}
+.Desc {
+  width: 90%;
+  margin-left: 20px;
+}
+.Desc h2 {
+  font-size: 30px;
+}
+.Desc h1 {
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: #c5c5c5;
+}
+.Desc p {
+  margin-bottom: 20px;
+}
+
+/* ------------------- css login dan register --------------------- */
+
+.main-login-regis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+}
+.container-login-regis {
+  display: flex;
+  border-radius: 12px;
+  width: 60%;
+  max-width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sideCol {
+  background: #0600e5;
+  padding: 120px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
+  width: 20%;
+}
+
+.sideCol::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 100%;
+}
+
+.imground {
+  width: 65vh;
+  height: 65vh;
+  margin-left: -95px;
+  position: absolute;
+  top: 15%;
+
+}
+.imground-regis {
+  width: 65vh;
+  height: 65vh;
+  margin-left: -15%;
+  position: absolute;
+  top: 15%;
+  animation: moveUpDown 2s infinite alternate;
+}
+
+
+.loginBox {
+  width: 100%;
+  height: 80vh;
+  margin-left: 10%;
+
+}
+
+.loginBox h2 {
+  font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.loginBox h1 {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 50px;
+}
+.loginBox p {
+  margin-left: 50px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 200;
+  opacity: #a9a9a9;
+  margin-bottom: 20px;
+}
+.loginBox p[class="regis"] {
+  font-size: 15px;
+  margin-top: 7px;
+  text-align: center;
+  font-weight: 200;
+  opacity: #a9a9a9;
+  margin-bottom: 15px;
+}
+.form-login-regis {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 15px;
+  margin-left: 25%;
+}
+.email,
+.password {
+  display: block;
+  left: 20%;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 79%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.remember-me {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.form-login-regis p[id="forgot"] {
+  display: inline;
+  margin-left: 13%;
+  cursor: pointer;
+  margin-top: 0px;
+  position: absolute;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+#check {
+  margin-left: 25%;
+  cursor: pointer;
+}
+.form-login-regis p:hover {
+  color: #000;
+  font-weight: 700;
+}
+.form-login-regis button {
+  margin-top: 15px;
+  display: block;
+  padding: 10px 24%;
+  border-radius: 12px;
+  margin-left: 26%;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.form-login-regis button:hover {
+  /* background-color: #fff;
+  color: #000; */
+  transform: scale(1.03);
+}
+#admit {
+  margin-left: 26%;
+  margin-top: 10px;
+  font-weight: 400;
+  max-width: 50%;
+  font-size: 12px;
+  text-align: left;
+}
+#admit span {
+  color: #0600e5;
+  cursor: pointer;
+}
+#Sign {
+  font-weight: 300;
+  font-size: 14px;
+}
+#Sign a,
+span {
+  color: #0600e5;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+#Sign span:hover {
+  color: #0600e5;
+  cursor: pointer;
+  transform: scale(1.05);
+  font-weight: 700;
+}
+

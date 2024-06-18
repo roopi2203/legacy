@@ -16,5 +16,8 @@ module.exports = merge(common, {
             },
         },
         compress: true,
+        historyApiFallback: {
+            index: 'login.html'
+        }
     },
 });

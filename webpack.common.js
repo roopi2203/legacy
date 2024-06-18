@@ -50,6 +50,13 @@ module.exports = {
         }
     },
     plugins: [
+
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: path.resolve(__dirname, 'src/templates/login.html'),
+        
+        }),
+
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -73,8 +80,20 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
+            filename: 'content-detail.html',
+            template: path.resolve(__dirname, 'src/templates/content-detail.html'),
+        
+        }),
+
+        new HtmlWebpackPlugin({
             filename: 'faq.html',
             template: path.resolve(__dirname, 'src/templates/faq.html'),
+        
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'register.html',
+            template: path.resolve(__dirname, 'src/templates/register.html'),
         
         }),
 

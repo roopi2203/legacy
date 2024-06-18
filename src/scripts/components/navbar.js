@@ -12,15 +12,10 @@ const navbarElement = `
         </ul>
     </div>
 
-    <div class="profile-header">
-        <div class="profile-images">
-        <a href="/profile.html"><img src="./images/profile-picture-1.jpg" alt=""></a>
-            
-        </div>
+    <div class="profile-header" id='navbar-profile'>
+        <button class="btn-auth" id="loginButton">Login</button>
     </div>
-
-
-`
+`;
 
 export {
     navbarElement

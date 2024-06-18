@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <title>Legacy</title>
     <meta name="desc" content="website edukasi sejarah dan budaya">
 </head>
+
 <body>
     <header id="header">
-        
+
     </header>
 
     <main>
@@ -28,14 +30,14 @@
 
         <div class="btn-read-now">
             <div class="line"></div>
-            <button class="btn-black">READ NOW</button>
+            <a href="history.html"><button class="btn-black">READ NOW</button></a>
             <div class="line"></div>
         </div>
 
         <h1 class="content-title">Freshly Unveiled</h1>
 
         <div class="content" id="main-content">
-            
+
         </div>
 
         <div class="second-content">
@@ -46,7 +48,9 @@
                 <h2>Discover the untold stories <br>
                     of the past and unlock <br>
                     the secrets of history</h2>
-                <p>Embark on a journey to unveil the lesser-known narratives of history, delving deep into the mysteries that have shaped our past, and discovering untold stories that illuminate the richness of our shared human experience.</p>
+                <p>Embark on a journey to unveil the lesser-known narratives of history, delving deep into the mysteries
+                    that have shaped our past, and discovering untold stories that illuminate the richness of our shared
+                    human experience.</p>
             </div>
         </div>
 
@@ -56,7 +60,9 @@
                     and uncover the mysteries of <br>
                     civilizations long gone.</h2>
 
-                <p>Plunge into the annals of time, delving deep into the pages of history to unearth the secrets of bygone civilizations, revealing the profound mysteries that shaped humanity's journey through the ages.</p>
+                <p>Plunge into the annals of time, delving deep into the pages of history to unearth the secrets of
+                    bygone civilizations, revealing the profound mysteries that shaped humanity's journey through the
+                    ages.</p>
             </div>
             <div class="third-content-img">
                 <img src="./images/third-content-img.png" alt="">
@@ -67,5 +73,14 @@
 
     <footer id="footer">
     </footer>
+
+    <script type="module">
+        import { fetchData } from '../scripts/index.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchData('', 4); // Set the limit to 4 for index.html
+        });
+    </script>
 </body>
+
 </html>
